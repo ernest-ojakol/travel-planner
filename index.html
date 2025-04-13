@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-suitcase"></i> Travel Planner
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Saved Trips</a></li>
+            <li><a href="#" id="login-btn">Login</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home">
+        <div class="hero">
+            <h1>Plan Your Perfect Trip</h1>
+            <p>Discover destinations, check the weather, and map your journey with ease.</p>
+            <form id="trip-form" class="trip-form">
+                <div class="form-group">
+                    <label for="start">Starting Point</label>
+                    <input type="text" id="start" placeholder="Enter city or address" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Enter destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="dates">Travel Dates</label>
+                    <input type="date" id="dates" required>
+                </div>
+                <div class="form-group">
+                    <label for="interests">Interests</label>
+                    <select id="interests">
+                        <option value="">Select an interest</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="culture">Culture</option>
+                        <option value="relaxation">Relaxation</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Plan My Trip</button>
+            </form>
+        </div>
+        <div class="teaser-map">
+            <div class="map-placeholder">
+                <p>Interactive Map Preview (Static Demo)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>Not a member? <a href="#" id="signup-btn">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Travel Planner App</p>
+    </footer>
+
+    <script src="public/js/home.js"></script>
+</body>
+
+</html>
