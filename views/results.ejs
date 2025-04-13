@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+    <section class="results">
+        <h1>Your Trip Plan</h1>
+        <div class="trip-details">
+            <p><strong>From:</strong>
+                <%= start %>
+            </p>
+            <p><strong>To:</strong>
+                <%= destination %>
+            </p>
+            <p><strong>Dates:</strong>
+                <%= dates %>
+            </p>
+            <p><strong>Interests:</strong>
+                <%= interests || 'None' %>
+            </p>
+            <p><strong>Weather in <%= destination %>:</strong>
+                <%= weather.temp %>°C, <%= weather.description %>
+            </p>
+            <button class="btn" id="save-trip">Save Trip</button>
+            <button class="btn" id="share-trip">Share Trip</button>
+        </div>
+        <div class="map-container">
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </section>
+    <script>
+        const tripData = {
+            start: "<%= start %>",
+            destination: "<%= destination %>",
+            dates: "<%= dates %>",
+            interests: "<%= interests %>",
+            weather: { temp: <%= weather.temp %>, description: "<%= weather.description %>" }
+        };
+    </script>
+    <script src="/js/results.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=<%= googleMapsApiKey %>&callback=initMap&libraries=places"></script>
+    <%- include('partials/footer') %>
