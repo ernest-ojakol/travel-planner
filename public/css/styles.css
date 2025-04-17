@@ -13,7 +13,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -65,10 +66,11 @@ h2 {
     cursor: pointer;
 }
 
-/* Home Section */
+/* Sections */
 .home,
 .results,
-.saved-trips {
+.saved-trips,
+.favorites {
     padding: 2rem;
     animation: fadeIn 1s ease-in;
 }
@@ -81,7 +83,8 @@ h2 {
 
 .hero h1,
 .results h1,
-.saved-trips h1 {
+.saved-trips h1,
+.favorites h1 {
     font-size: 2.5rem;
     color: var(--primary);
     margin-bottom: 1rem;
@@ -179,32 +182,24 @@ h2 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
+/* Favorites */
+#favorites-list {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.modal-content {
+.favorite-card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
-    max-width: 400px;
-    width: 90%;
-    animation: slideIn 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.close {
-    float: right;
+.favorite-card h3 {
     font-size: 1.5rem;
-    cursor: pointer;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -266,7 +261,8 @@ footer {
 
     .hero h1,
     .results h1,
-    .saved-trips h1 {
+    .saved-trips h1,
+    .favorites h1 {
         font-size: 1.8rem;
     }
 }

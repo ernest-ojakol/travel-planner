@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Paris",
+    "description": "City of lights, famous for the Eiffel Tower and art.",
+    "coordinates": { "lat": 48.8566, "lng": 2.3522 }
+  },
+  {
+    "name": "Tokyo",
+    "description": "Vibrant metropolis with temples and modern culture.",
+    "coordinates": { "lat": 35.6762, "lng": 139.6503 }
+  },
+  {
+    "name": "New York",
+    "description": "The Big Apple, known for Times Square and Central Park.",
+    "coordinates": { "lat": 40.7128, "lng": -74.0060 }
+  }
+]

@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+    <section class="favorites">
+        <h1>Favorite Destinations</h1>
+        <% if (locals.error) { %>
+            <p class="error">
+                <%= error %>
+            </p>
+            <% } %>
+                <div id="favorites-list">
+                    <% if (favorites.length> 0) { %>
+                        <% favorites.forEach(favorite=> { %>
+                            <div class="favorite-card">
+                                <h3>
+                                    <%= favorite.name %>
+                                </h3>
+                                <p>
+                                    <%= favorite.description %>
+                                </p>
+                            </div>
+                            <% }) %>
+                                <% } else { %>
+                                    <p>No favorite destinations found.</p>
+                                    <% } %>
+                </div>
+                <div class="map-container">
+                    <div id="map" style="height: 400px;"></div>
+                </div>
+    </section>
+    <script src="/js/favorites.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=<%= googleMapsApiKey %>&callback=initMap&libraries=places"></script>
+    <%- include('partials/footer') %>
